@@ -7,6 +7,8 @@ namespace myApp
 
     class Program
     {
+        //
+        //
 
         static void Main(string[] args)
         {
@@ -64,13 +66,13 @@ namespace myApp
             {
                 Tetrahedron prism = new(0.00001, 0.001);
 
-                        lock (Tetrahedron.setOfTetrahedron)
-                        {
-                            if (!CheckIntersectionService.IsIntersection(prism))
-                            {
-                                Tetrahedron.AddPrismToSortedSet(prism);
-                            }
-                        }
+                lock (Tetrahedron.setOfTetrahedron)
+                {
+                    if (!CheckIntersectionService.IsIntersection(prism))
+                    {
+                        Tetrahedron.AddPrismToSortedSet(prism);
+                    }
+                }
 
             }
         }
