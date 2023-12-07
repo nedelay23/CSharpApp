@@ -3,7 +3,7 @@ using SphereTest;
 using System.Threading;
 
 namespace myApp
-{
+{   //привет!
 
     class Program
     {
@@ -64,13 +64,13 @@ namespace myApp
             {
                 Tetrahedron prism = new(0.00001, 0.001);
 
-                        lock (Tetrahedron.setOfTetrahedron)
-                        {
-                            if (!CheckIntersectionService.IsIntersection(prism))
-                            {
-                                Tetrahedron.AddPrismToSortedSet(prism);
-                            }
-                        }
+                lock (Tetrahedron.setOfTetrahedron)
+                {
+                    if (!CheckIntersectionService.IsIntersection(prism))
+                    {
+                        Tetrahedron.AddPrismToSortedSet(prism);
+                    }
+                }
 
             }
         }
