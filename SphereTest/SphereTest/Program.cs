@@ -3,7 +3,7 @@ using SphereTest;
 using System.Threading;
 
 namespace myApp
-{   //привет!
+{   //привет это ветка dev/vasilii
 
     class Program
     {
